@@ -1,0 +1,12 @@
+CREATE TABLE patient_healthData (id INTEGER PRIMARY KEY, gender TEXT, race TEXT, age INTEGER, diagnosis TEXT);
+INSERT INTO patient_healthData VALUES (1, "F", "W", 56, "Pancreatic Cancer");
+INSERT INTO patient_healthData VALUES (2, "M", "B", 46, "Heart Disease");
+INSERT INTO patient_healthData VALUES (3, "M", "W", 62, "Lung Cancer");
+INSERT INTO patient_healthData VALUES (4, "M", "B", 40, "HIgh Blood Pressure");
+INSERT INTO patient_healthData VALUES (5, "F", "W", 51, "High Blood Pressure");
+INSERT INTO patient_healthData VALUES (6, "M", "W", 49, "High Cholesterol");
+INSERT INTO patientid	gender	race	age	diagnosis
+SELECT * FROM patient_healthData;
+SELECT * FROM patient_healthData ORDER BY race;
+SELECT MAX (diagnosis) from patient_healthData;
+SELECT gender, COUNT (*) FROM patient_healthData GROUP BY gender;
