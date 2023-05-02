@@ -1,0 +1,20 @@
+I created a table for a make up store with 15 items.
+CREATE TABLE makeup_store (id INTEGER PRIMARY KEY, item TEXT, brand TEXT, price INTEGER, quantity INTEGER);
+INSERT INTO makeup_store VALUES (1, "Eyeshadow", "KatVonD", 10, 5);
+INSERT INTO makeup_store VALUES (2, "Foundation", "FentyBeauty", 30, 6);
+INSERT INTO makeup_store VALUES (3, "Blush", "ColorPop", 13, 2);
+INSERT INTO makeup_store VALUES (4, "LipGloss", "Tarte", 20, 2);
+SELECT * FROM makeup_store
+
+I then wanted to know which items were greater than $10
+SELECT * FROM makeup_store
+WHERE price > 10;
+
+I then wanted to know the total sales if I got one purchase of each makeup item that day'
+SELECT SUM (price) FROM makeup_store;
+Next, I wanted to know how many items I have in my store 
+SELECT SUM (quantity) FROM makeup_store;
+Then I wanted to find out the highest quantity item in the store
+SELECT MAX (quantity) FROM makeup_store;
+Lastly I wanted to know how many of each item I have
+SELECT item, SUM (quantity) FROM makeup_store GROUP BY item;
